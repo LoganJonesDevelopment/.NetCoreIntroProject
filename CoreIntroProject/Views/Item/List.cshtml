@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CoreIntroProject.Models.Item>
+<html>
+<head>
+    <title>Logan's Gear Shop</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <div>
+            <h2>@item.Name</h2>
+            <h3>@item.Price</h3>
+            <h4>@item.Category.CategoryName</h4>
+        </div>
+    }
+</body>
+</html>
