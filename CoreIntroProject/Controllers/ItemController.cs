@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreIntroProject.Models;
+using CoreIntroProject.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreIntroProject.Controllers
@@ -20,7 +21,9 @@ namespace CoreIntroProject.Controllers
 
         public ViewResult List()
         {
-            return View(_itemRepository.AllItems);
+            ItemsListViewModel itemsListViewModel = new ItemsListViewModel();
+            itemsListViewModel.Items = _itemRepository.AllItems;
+            return View(itemsListViewModel);
         }
     }
 }
