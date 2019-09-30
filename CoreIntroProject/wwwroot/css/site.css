@@ -5,3 +5,14 @@ body {
     background: linear-gradient(to right, #0062E6, #33AEFF);
     padding-top: 56px;
 }
+
+
+html, body {
+    height: 100%;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 15%;
+}
